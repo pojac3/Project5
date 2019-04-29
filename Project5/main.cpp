@@ -642,7 +642,7 @@ int main() {
     
     //go through until end of file (right now were only going through 10 times
     //since xcode doesnt support redirected input(:
-    while (i < 10) {
+    while (!cin.eof()) {
         //getting x and y
         cin >> x >> y;
         //adding the edge to the AdjMatrix
@@ -651,6 +651,7 @@ int main() {
         (*myList).addEdge(x,y);
         //increment i
         i++;
+        cout << i << " ";
     }
     
     //making a copy of each
